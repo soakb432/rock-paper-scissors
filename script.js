@@ -1,13 +1,7 @@
-//FUNCTION getRandomInteger(max) {
-//  [Math.random()] RETURNS number between 0 and less than 1
-//  ["max" is the largest integer the computer can choose PLUS 1]
-//  [Math.floor()] TAKES a number and rounds it down to the nearest integer
-//    
-//  GET random number between 0 and 1
-//  MULTIPLY random number with "max"
-//  ROUND DOWN the result
-//  RETURN an integer between 0 and "max" MINUS 1
-// }
+function getRandomInteger(max) {
+  //  ["max" is the largest integer that can be chosen PLUS 1]
+  return Math.floor(Math.random() * max);
+}
 
 //FUNCTION getComputerChoice {
 //  CREATE variable "choice"
