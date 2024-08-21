@@ -13,8 +13,15 @@ function getComputerChoice() {
     
     case 1: // IF choice EQUALS 1: 
       return "paper";
-
+    
     case 2: // IF choice EQUALS 2:
       return "scissors";
   }
 }
+
+//FUNCTION getHumanChoice() {
+//  CREATE variable that stores human's choice
+//  PROMPT the human to choose "rock", "paper" or "scissors"
+//  MAKE the prompt undercase so it's case insensitive
+//  RETURN human's choice
+//}
