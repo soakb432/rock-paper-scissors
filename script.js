@@ -26,5 +26,10 @@ function getHumanChoice() {
 }
 
 //FUNCTION getHumanChoice() 
-//
+// CHECK human's choice
+// CREATE variable "keepGoing" that controls while loop (set to True)
+// WHILE (keepGoing) {
+//   PROMPT the human to choose between "rock", "paper" or "scissors"
+//   IF the human chooses either one {SET keepGoing to False}
+// }
 //}
