@@ -34,3 +34,7 @@ function getHumanChoice() {
 
   return choice;
 }
+
+// DECLARE the players score variables
+let humanScore = 0;
+let computerScore = 0;
