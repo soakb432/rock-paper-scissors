@@ -19,9 +19,12 @@ function getComputerChoice() {
   }
 }
 
-//FUNCTION getHumanChoice() {
-//  CREATE variable that stores human's choice
-//  PROMPT the human to choose "rock", "paper" or "scissors"
-//  MAKE the prompt undercase so it's case insensitive
-//  RETURN human's choice
+function getHumanChoice() {
+  //  CREATE variable that stores human's choice
+  let choice = prompt('Please choose between "rock"," "paper" or "scissors"' ).toLowerCase() //  PROMPT the human to choose
+  return choice;
+}
+
+//FUNCTION getHumanChoice() 
+//
 //}
