@@ -88,6 +88,14 @@ function playGame() {
     playRound(humanSelection, computerSelection);
   }
 
+  if (humanScore === computerScore) {
+    console.log("Nobody wins!");
+  } else if (humanScore > computerScore) {
+    console.log("You win!");
+  } else {
+    console.log("Computer wins!");
+  }
+
 }
 
 // FUNCTION playGame {
