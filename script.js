@@ -38,3 +38,19 @@ function getHumanChoice() {
 // DECLARE the players score variables
 let humanScore = 0;
 let computerScore = 0;
+
+// FUNCTION playRound(humanChoice, computerChoice) {
+//   "humanChoice" is the choice made by the human
+//   "computerChoice" is the choice made by the computer
+//   PLAY a game:
+//     "rock" beats "scissors", "scissors" beat "paper", "paper" beats "rock" 
+//
+//     IF human AND computer choose the same --> Tie
+//     both human and computer have 50% of winning (tie situation accounted)
+//     ELSE IF { human chooses "rock" AND computer chooses "scissors" --> “You win! Rock beats Scissors"
+//     } ELSE --> “You lose! Paper beats Rock”
+//     ELSE IF { human chooses "scissors" AND computer chooses "paper" --> “You win! Scissors beats Paper"
+//     } ELSE --> “You lose! Rock beats Scissors"
+//     ELSE IF { human chooses "paper" AND computer chooses "rock" --> “You win! Paper beats Rock"
+//     } ELSE --> “You lose! Scissors beats Paper"
+// }
