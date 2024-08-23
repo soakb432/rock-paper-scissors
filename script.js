@@ -48,15 +48,33 @@ function playRound(humanChoice, computerChoice) {
     switch (humanChoice) { // both human and computer have 50% of winning (tie situation accounted)
 
       case "rock":
-        (computerChoice === "scissors") ? console.log("You win! Rock beats Scissors") : console.log("You lose! Paper beats Rock");
+        if (computerChoice === "scissors") {
+          console.log("You win! Rock beats Scissors");
+          humanScore++;
+        } else {
+          console.log("You lose! Paper beats Rock");
+          computerScore++;
+        }
         break;
 
       case "scissors":
-        (computerChoice === "paper") ? console.log("You win! Scissors beats Paper") : console.log("You lose! Rock beats Scissors");
+        if (computerChoice === "paper") {
+          console.log("You win! Scissors beats Paper");
+          humanScore++;
+        } else {
+          console.log("You lose! Rock beats Scissors");
+          computerScore++;
+        }
         break;
 
       case "paper":
-        (computerChoice === "rock") ? console.log("You win! Paper beats Rock") : console.log("You lose! Scissors beats Paper");
+        if (computerChoice === "rock") {
+          console.log("You win! Paper beats Rock");
+          humanScore++;
+        } else {
+          console.log("You lose! Scissors beats Paper");
+          computerScore++;
+        }
         break;
 
     }
