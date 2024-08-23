@@ -86,10 +86,11 @@ function playGame() {
     let humanSelection = getHumanChoice();
     let computerSelection = getComputerChoice();
     playRound(humanSelection, computerSelection);
-    console.log("Human: ", humanScore, "||", "Computer: ", computerScore);
+    console.log("You: ", humanScore, "||", "Computer: ", computerScore); // KEEP track of scores
   }
-
-  if (humanScore === computerScore) {
+  
+  // DECLARE winner at the end 
+  if (humanScore === computerScore) { 
     console.log("Nobody wins!");
   } else if (humanScore > computerScore) {
     console.log("You win!");
@@ -98,10 +99,3 @@ function playGame() {
   }
 
 }
-
-// FUNCTION playGame {
-
-
-// KEEP track of scores
-// DECLARE winner at the end 
-// }
