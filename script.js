@@ -89,11 +89,13 @@ function playGame() {
     console.log("You: ", humanScore, "||", "Computer: ", computerScore); // KEEP track of scores
   }
   
-  // DECLARE winner at the end 
+  // DECLARE winner at the end
   if (humanScore === computerScore) { 
     console.log("Nobody wins!");
+
   } else if (humanScore > computerScore) {
     console.log("You win!");
+
   } else {
     console.log("Computer wins!");
   }
