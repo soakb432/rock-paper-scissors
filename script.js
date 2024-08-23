@@ -80,3 +80,19 @@ function playRound(humanChoice, computerChoice) {
     }
   }
 }
+
+function playGame() {
+  for (let i = 0; i < 5; i++) { // CALL playRound 5 times
+    let humanSelection = getHumanChoice();
+    let computerSelection = getComputerChoice();
+    playRound(humanSelection, computerSelection);
+  }
+
+}
+
+// FUNCTION playGame {
+
+
+// KEEP track of scores
+// DECLARE winner at the end 
+// }
