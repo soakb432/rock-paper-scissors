@@ -86,6 +86,7 @@ function playGame() {
     let humanSelection = getHumanChoice();
     let computerSelection = getComputerChoice();
     playRound(humanSelection, computerSelection);
+    console.log("Human: ", humanScore, "||", "Computer: ", computerScore);
   }
 
   if (humanScore === computerScore) {
