@@ -82,12 +82,12 @@ function playGame() {
     }
   }
 
-  for (let i = 0; i < 5; i++) { // CALL playRound 5 times
-    let humanSelection = getHumanChoice();
-    let computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-    console.log("You: ", humanScore, "||", "Computer: ", computerScore); // KEEP track of scores
-  }
+  // for (let i = 0; i < 5; i++) { // CALL playRound 5 times
+  //   let humanSelection = getHumanChoice();
+  //   let computerSelection = getComputerChoice();
+  //   playRound(humanSelection, computerSelection);
+  //   console.log("You: ", humanScore, "||", "Computer: ", computerScore); // KEEP track of scores
+  // }
   
   // DECLARE winner at the end
   if (humanScore === computerScore) { 
@@ -101,3 +101,20 @@ function playGame() {
   }
 
 }
+
+//----- UI CREATION ----//
+
+const body = document.querySelector("body");
+
+const rock = document.createElement("button");
+rock.textContent = "Rock";
+
+const paper = document.createElement("button");
+paper.textContent = "Paper";
+
+const scissors = document.createElement("button");
+scissors.textContent = "Scissors";
+
+body.appendChild(rock)
+body.appendChild(paper)
+body.appendChild(scissors)
