@@ -37,7 +37,7 @@ function getHumanChoice() {
 
 function playRound(humanChoice, computerChoice) {
   if (humanChoice === computerChoice) { // IF human AND computer choose the same
-    console.log("Tie!");
+    results.textContent = "Tie!";
 
   } else {
     
@@ -45,30 +45,30 @@ function playRound(humanChoice, computerChoice) {
 
       case "rock":
         if (computerChoice === "scissors") {
-          console.log("You win! Rock beats Scissors");
+          results.textContent = "You win! Rock beats Scissors";
           // humanScore++;
         } else {
-          console.log("You lose! Paper beats Rock");
+          results.textContent = "You lose! Paper beats Rock";
           // computerScore++;
         }
         break;
 
       case "scissors":
         if (computerChoice === "paper") {
-          console.log("You win! Scissors beats Paper");
+          results.textContent = "You win! Scissors beats Paper";
           // humanScore++;
         } else {
-          console.log("You lose! Rock beats Scissors");
+          results.textContent = "You lose! Rock beats Scissors";
           // computerScore++;
         }
         break;
 
       case "paper":
         if (computerChoice === "rock") {
-          console.log("You win! Paper beats Rock");
+          results.textContent = "You win! Paper beats Rock";
           // humanScore++;
         } else {
-          console.log("You lose! Scissors beats Paper");
+          results.textContent = "You lose! Scissors beats Paper";
           // computerScore++;
         }
         break;
@@ -130,3 +130,7 @@ buttons.forEach((button) => {
     playRound(button.id, getComputerChoice());
   });
 });
+
+const results = document.createElement("div");
+
+body.append(results);
