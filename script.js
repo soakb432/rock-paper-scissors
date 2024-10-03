@@ -115,6 +115,14 @@ paper.textContent = "Paper";
 const scissors = document.createElement("button");
 scissors.textContent = "Scissors";
 
-body.appendChild(rock)
-body.appendChild(paper)
-body.appendChild(scissors)
+body.appendChild(rock);
+body.appendChild(paper);
+body.appendChild(scissors);
+
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    alert(button.textContent);
+  });
+});
