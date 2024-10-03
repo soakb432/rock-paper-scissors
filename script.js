@@ -107,12 +107,15 @@ function playGame() {
 const body = document.querySelector("body");
 
 const rock = document.createElement("button");
+rock.setAttribute("id", "rock");
 rock.textContent = "Rock";
 
 const paper = document.createElement("button");
+paper.setAttribute("id", "paper");
 paper.textContent = "Paper";
 
 const scissors = document.createElement("button");
+scissors.setAttribute("id", "scissors");
 scissors.textContent = "Scissors";
 
 body.appendChild(rock);
@@ -123,6 +126,6 @@ const buttons = document.querySelectorAll("button");
 
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
-    alert(button.textContent);
+    playRound(button.id, getComputerChoice());
   });
 });
