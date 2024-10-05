@@ -46,32 +46,29 @@ function playRound(humanChoice, computerChoice) {
       case "rock":
         if (computerChoice === "scissors") {
           results.textContent = "You win! Rock beats Scissors";
-          // humanScore++;
+          return true;
         } else {
           results.textContent = "You lose! Paper beats Rock";
-          // computerScore++;
+          return false;
         }
-        break;
 
       case "scissors":
         if (computerChoice === "paper") {
           results.textContent = "You win! Scissors beats Paper";
-          // humanScore++;
+          return true;
         } else {
           results.textContent = "You lose! Rock beats Scissors";
-          // computerScore++;
+          return false;
         }
-        break;
 
       case "paper":
         if (computerChoice === "rock") {
           results.textContent = "You win! Paper beats Rock";
-          // humanScore++;
+          return true;
         } else {
           results.textContent = "You lose! Scissors beats Paper";
-          // computerScore++;
+          return false;
         }
-        break;
 
     }
   }
@@ -82,6 +79,17 @@ function playGame() {
   // DECLARE the players score variables
   let humanScore = 0;
   let computerScore = 0;
+
+  /*
+  EVERY TIME button is clicked, a round plays
+
+  WHILE humanScore IS LESS THAN 5 AND computerScore IS LESS THAN 5:
+  
+    instead of increasing scores in playRound, make it so that the function returns a boolean that determines who gets the increase
+    --> IF winner IS TRUE THEN humanScore++
+    --> ELSE THEN computerScore++
+
+  */
 
   // for (let i = 0; i < 5; i++) { // CALL playRound 5 times
   //   let humanSelection = getHumanChoice();
