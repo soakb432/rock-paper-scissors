@@ -96,6 +96,11 @@ function playGame() {
         computerScore++;
       }
 
+      if (humanScore >= 5 || computerScore >= 5) {
+        results.textContent = (humanScore > computerScore) ? "You win!" : "Computer wins!";
+        results.textContent += " Press any button to play again.";
+      }
+
       score.textContent = "You: " + humanScore + " || " + "Computer: " + computerScore;
 
     });
