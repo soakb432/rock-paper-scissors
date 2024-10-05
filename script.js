@@ -4,31 +4,30 @@ function getRandomInteger(max) {
 }
 
 function getComputerChoice() {
-  // CREATE variable "choice"
-  let choice = getRandomInteger(3); // CHOOSE random integer, STORE it in "choice"
+  let choice = getRandomInteger(3);
   
   switch (choice) {
-    case 0: // IF choice EQUALS 0: 
+    case 0:
       return "rock";
     
-    case 1: // IF choice EQUALS 1: 
+    case 1:
       return "paper";
     
-    case 2: // IF choice EQUALS 2:
+    case 2:
       return "scissors";
   }
 }
 
 function getHumanChoice() {
-  let choice; // CREATE variable that stores human's choice
-  let keepGoing = true; // CREATE variable "keepGoing" that controls while loop
+  let choice;
+  let keepGoing = true;
   
-  while (keepGoing) { // CHECK human's choice
+  while (keepGoing) {
 
-    choice = prompt('Please choose between "rock"," "paper" or "scissors"').toLowerCase(); // PROMPT the human to choose
+    choice = prompt('Please choose between "rock"," "paper" or "scissors"').toLowerCase();
     
-    if (choice === "rock" || choice === "paper" || choice === "scissors") { // IF "choice" is valid
-      keepGoing = false; // will exit out of loop in next iteration
+    if (choice === "rock" || choice === "paper" || choice === "scissors") {
+      keepGoing = false;
     }
   }
 
@@ -36,7 +35,7 @@ function getHumanChoice() {
 }
 
 function playRound(humanChoice, computerChoice) {
-  if (humanChoice === computerChoice) { // IF human AND computer choose the same
+  if (humanChoice === computerChoice) {
     results.textContent = "Tie!";
     return null;
 
@@ -77,7 +76,6 @@ function playRound(humanChoice, computerChoice) {
 
 
 function playGame() {
-  // DECLARE the players score variables
   let humanScore = 0;
   let computerScore = 0;
 
@@ -112,25 +110,6 @@ function playGame() {
 
     });
   });
-
-  // for (let i = 0; i < 5; i++) { // CALL playRound 5 times
-  //   let humanSelection = getHumanChoice();
-  //   let computerSelection = getComputerChoice();
-  //   playRound(humanSelection, computerSelection);
-  //   console.log("You: ", humanScore, "||", "Computer: ", computerScore); // KEEP track of scores
-  // }
-  
-  // DECLARE winner at the end
-//   if (humanScore === computerScore) { 
-//     console.log("Nobody wins!");
-
-//   } else if (humanScore > computerScore) {
-//     console.log("You win!");
-
-//   } else {
-//     console.log("Computer wins!");
-//   }
-
 }
 
 //----- UI CREATION ----//
