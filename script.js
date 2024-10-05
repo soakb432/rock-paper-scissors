@@ -94,6 +94,9 @@ function playGame() {
       } else {
         computerScore++;
       }
+
+      score.textContent = "You: " + humanScore + " || " + "Computer: " + computerScore;
+
     });
   });
 
@@ -105,15 +108,15 @@ function playGame() {
   // }
   
   // DECLARE winner at the end
-  if (humanScore === computerScore) { 
-    console.log("Nobody wins!");
+//   if (humanScore === computerScore) { 
+//     console.log("Nobody wins!");
 
-  } else if (humanScore > computerScore) {
-    console.log("You win!");
+//   } else if (humanScore > computerScore) {
+//     console.log("You win!");
 
-  } else {
-    console.log("Computer wins!");
-  }
+//   } else {
+//     console.log("Computer wins!");
+//   }
 
 }
 
@@ -138,7 +141,9 @@ body.appendChild(paper);
 body.appendChild(scissors);
 
 const results = document.createElement("div");
+const score = document.createElement("div");
 
 body.append(results);
+body.append(score);
 
 playGame();
