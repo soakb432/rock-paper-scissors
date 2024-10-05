@@ -38,6 +38,7 @@ function getHumanChoice() {
 function playRound(humanChoice, computerChoice) {
   if (humanChoice === computerChoice) { // IF human AND computer choose the same
     results.textContent = "Tie!";
+    return null;
 
   } else {
     
@@ -91,7 +92,7 @@ function playGame() {
 
       if (roundWinner) {
         humanScore++;
-      } else {
+      } else if (roundWinner === false) {
         computerScore++;
       }
 
