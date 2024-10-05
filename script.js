@@ -83,6 +83,11 @@ function playGame() {
 
   const buttons = document.querySelectorAll("button");
 
+  let scoreReset = () => {
+    humanScore = 0;
+    computerScore = 0;
+  }
+
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
       let humanChoice = button.id;
@@ -99,7 +104,9 @@ function playGame() {
       if (humanScore >= 5 || computerScore >= 5) {
         results.textContent = (humanScore > computerScore) ? "You win!" : "Computer wins!";
         results.textContent += " Press any button to play again.";
-      }
+
+        scoreReset();
+      } 
 
       score.textContent = "You: " + humanScore + " || " + "Computer: " + computerScore;
 
