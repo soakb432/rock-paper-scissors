@@ -80,16 +80,22 @@ function playGame() {
   let humanScore = 0;
   let computerScore = 0;
 
-  /*
-  EVERY TIME button is clicked, a round plays
+  const buttons = document.querySelectorAll("button");
 
-  WHILE humanScore IS LESS THAN 5 AND computerScore IS LESS THAN 5:
-  
-    instead of increasing scores in playRound, make it so that the function returns a boolean that determines who gets the increase
-    --> IF winner IS TRUE THEN humanScore++
-    --> ELSE THEN computerScore++
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      let humanChoice = button.id;
+      let computerChoice = getComputerChoice();
 
-  */
+      let roundWinner = playRound(humanChoice, computerChoice);
+
+      if (roundWinner) {
+        humanScore++;
+      } else {
+        computerScore++;
+      }
+    });
+  });
 
   // for (let i = 0; i < 5; i++) { // CALL playRound 5 times
   //   let humanSelection = getHumanChoice();
@@ -131,14 +137,8 @@ body.appendChild(rock);
 body.appendChild(paper);
 body.appendChild(scissors);
 
-const buttons = document.querySelectorAll("button");
-
-buttons.forEach((button) => {
-  button.addEventListener("click", () => {
-    playRound(button.id, getComputerChoice());
-  });
-});
-
 const results = document.createElement("div");
 
 body.append(results);
+
+playGame();
